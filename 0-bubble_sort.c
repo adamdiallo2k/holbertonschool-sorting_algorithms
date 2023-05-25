@@ -19,7 +19,8 @@ void swap(int *xp, int *yp) {
  * @size: The size of the array.
  */
 void print_array(int *array, size_t size) {
-    for (size_t i = 0; i < size; i++) {
+    size_t i;
+    for (i = 0; i < size; i++) {
         printf("%d ", array[i]);
     }
     printf("\n");
@@ -31,8 +32,10 @@ void print_array(int *array, size_t size) {
  * @size: The size of the array.
  */
 void bubble_sort(int *array, size_t size) {
-    for (size_t i = 0; i < size-1; i++) {
-        for (size_t j = 0; j < size-i-1; j++) {
+    size_t i = i;
+    for (i = 0; i < size-1; i++) {
+        size_t j;
+        for (j = 0; j < size-i-1; j++) {
             if (array[j] > array[j+1]) {
                 swap(&array[j], &array[j+1]);
                 print_array(array, size);
