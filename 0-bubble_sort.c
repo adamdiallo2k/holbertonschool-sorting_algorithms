@@ -18,13 +18,13 @@ void swap(int *xp, int *yp) {
  * @size: The size of the array.
  */
 void bubble_sort(int *array, size_t size) {
+    size_t i;
+    size_t j;
     if (array == NULL || size == 0) {
         printf("Invalid input: NULL array or size 0\n");
         return;
     }
-    size_t i;
-    for (i = 0; i < size - 1; i++) {
-        size_t j;
+    for (i = 0; i < size - 1; i++) {   
         for (j = 0; j < size - i - 1; j++) {
             if (array[j] > array[j + 1]) {
                 swap(&array[j], &array[j + 1]);
